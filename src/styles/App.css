@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+.hero {
+  @apply relative w-300 mx-auto mt-16 overflow-hidden rounded-xl bg-[radial-gradient(circle_at_85%_50%,#123c79_0,#0a2852_35%,#071b38_75%)] text-white;
+}
+
+.search-box-input {
+  @apply w-full border-0 outline-none text-[#172033] text-sm p-1;
+}
+
+.search-box-input::placeholder {
+  @apply text-[#98a3b3];
+}
+
+.calendar-icon {
+  @apply absolute z-2 right-32.5 top-20 w-28 h-28 flex items-center justify-center rotate-6 rounded-2xl bg-[#eef2ff] text-[#6571df] shadow-[0_15px_30px_rgba(0,0,0,0.2)];
+}
+
+.calendar-icon::before {
+  @apply content-[''] absolute top-0 left-4 right-4 h-3 rounded-b-md bg-[#5365df];
+}
+
+.calendar-icon span {
+  @apply text-[50px];
+}
+
+.location-icon {
+  @apply absolute z-3 right-63.75 top-36 w-9 h-9 flex items-center justify-center rounded-full bg-[#ff8b36] text-white text-sm shadow-[0_8px_20px_rgba(255,139,54,0.3)];
+}
+
+.card-header {
+  @apply relative h-32 p-4;
+}
+
+.card-header::after {
+  @apply content-[''] absolute inset-0 opacity-30;
+}
+
+.card-header.technology {
+  @apply bg-[linear-gradient(135deg,#102f59,#236bc3)];
+}
+
+.card-header.programming {
+  @apply bg-[linear-gradient(135deg,#164c43,#27a078)];
+}
+
+.card-header.artificial-intelligence {
+  @apply bg-[linear-gradient(135deg,#33216c,#7555d8)];
+}
+
+.event-category {
+  @apply relative z-2 inline-block py-2 px-3 rounded-3xl bg-[rgba(255,255,255,0.92)] text-[10px] font-bold;
+}
+
+.technology .event-category {
+  @apply text-[#236bc3];
+}
+
+.programming .event-category {
+  @apply text-[#168462];
+}
+
+.artificial-intelligence .event-category {
+  @apply text-[#6746c9];
+}
+
+.footer {
+  @apply py-6 border-t border-[#e3e8ef] bg-white text-center text-[#8793a4] text-[11px];
+}

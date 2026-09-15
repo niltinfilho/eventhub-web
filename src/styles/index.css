@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+* {
+  @apply m-0 p-0 box-border;
+}
+
+body {
+  @apply font-[Arial] bg-[#f5f8fc] text-[#111827];
+}
+
+a {
+  @apply decoration-0 text-inherit;
+}
+
+.nav-links a {
+  @apply relative py-6 text-sm text-[#aab7ca] transition-[0.2s];
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  @apply text-white;
+}
+
+.nav-links a.active::after {
+  @apply content-[''] absolute bottom-0 left-0 w-full h-0.5 bg-[#2d83ff];
+}
