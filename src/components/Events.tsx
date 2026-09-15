@@ -1,53 +1,27 @@
+import events from "../_utils/events-mock";
 import EventCard from "./EventCard";
 
 export default function Events() {
-  const events = [
-    {
-      type: "technology",
-      category: "Tecnologia",
-      title: "Workshop de Java e Spring Boot",
-      description: "Aprenda os fundamentos do desenvolvimento de APIs REST utilizando Java e Spring Boot.",
-      date: "10 Nov 2026",
-      location: "Fatec Jales"
-    },
-    {
-      type: "programming",
-      category: "Programação",
-      title: "Hackathon Fatec 2026",
-      description: " Uma experiência prática para criar soluções utilizando tecnologia.",
-      date: "15 Nov 2026",
-      location: "Fatec Jales"
-    },
-    {
-      type: "artificial-intelligence",
-      category: "Inteligência Artificial",
-      title: "Introdução à Inteligência Artificial",
-      description: "Conheça os conceitos fundamentais de inteligência artificial.",
-      date: "20 Nov 2026",
-      location: "Fatec Jales"
-    }
-  ];
-
   return (
-    <section className="events-section">
-      <div className="section-header">
+    <section className="w-275 mx-auto! mt-10! mb-15!">
+      <div className="flex items-end justify-between mb-5!">
         <div>
-          <span className="section-label">
+          <span className="block mb-1! text-[#5b8bc7] text-[10px] font-bold tracking-[1.2px]">
             AGENDA
           </span>
 
-          <h2>
+          <h2 className="text-2xl font-bold">
             Próximos eventos
           </h2>
         </div>
 
-        <a href="#" className="see-all">
+        <a href="#" className="flex items-center gap-2! text-[#2176ed] text-sm font-semibold">
           Ver todos
-          <span>→</span>
+          <span className="text-lg">→</span>
         </a>
       </div>
 
-      <div className="events-grid" id="eventsContainer">
+      <div className="grid grid-cols-3 gap-5">
         {events.map(event => (
           <EventCard
             type={event.type}
