@@ -1,9 +1,21 @@
 import './App.css'
+import Events from './components/Events'
+import Footer from './components/Footer'
+import Header from './components/Header'
+import Hero from './components/Hero'
 
 function App() {
 
   return (
-    <h1>Meu app ReactJS</h1>
+    <>
+      <Header></Header>
+      <main>
+        <Hero></Hero>
+        <Events></Events>
+      </main>
+
+      <Footer></Footer>
+    </>
   )
 }
 
